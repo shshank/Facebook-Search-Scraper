@@ -11,14 +11,14 @@ from bs4 import BeautifulSoup as BS4
 
 import config
 
-br = webdriver.Chrome()
+br = webdriver.PhantomJS()
 
 def restart():
     global br
     try:
         br.close()
     except:
-       br = webdriver.Chrome()
+       br = webdriver.PhantomJS()
        login()
 
 def login():
